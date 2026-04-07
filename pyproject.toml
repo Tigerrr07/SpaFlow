@@ -1,0 +1,47 @@
+[project]
+name = "spaflow"
+version = "0.1.0"
+description = "A spatial CCC tool to infer ligand-receptor interaction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "huchen", email = "chen.13589@osu.edu" }
+]
+keywords = [
+    "anndata",
+    "bioinformatics",
+    "ligand-receptor",
+    "scanpy",
+    "spatial-transcriptomics",
+    "squidpy",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "scanpy[leiden]>=1.10.3",
+    "squidpy>=1.6.1",
+    "setuptools<82",
+    "upsetplot==0.9.0",
+    "adjustText==1.3.0"
+
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "ipywidgets",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
